@@ -10,7 +10,8 @@ const Admin = () => {
     const onSubmit = data => {
         const eventData = {
             name: data.name,
-            imageURL: imageURL
+            imageURL: imageURL,
+            price: data.price
         };
         const url = `http://localhost:5000/addFruit`
         console.log(eventData);
@@ -43,7 +44,9 @@ const Admin = () => {
             <Header></Header>
             <h1>This is Admin Panel.</h1>
             <form onSubmit={handleSubmit(onSubmit)}>
-                <input name="name" defaultValue="New exciting Event" ref={register} />
+                <input name="name" defaultValue="Add Your Fruit" ref={register} />
+                <br/>
+                <input name="price" defaultValue="Add Your Price" ref={register} />
 
                 <br/>
                 <input type="file" name="exampleRequired" onChange={handleImageUpload} />

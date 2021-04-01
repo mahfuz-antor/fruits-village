@@ -13,8 +13,9 @@ import Header from './Components/Header/Header';
 import { createContext, useState } from 'react';
 import Shipment from './Components/Shipment/Shipment';
 import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
-import FruitDetail from './Components/FruitDetail/FruitDetail'
+// import FruitDetails from './Components/FruitDetail/FruitDetail'
 import Management from './Components/Management/Management';
+import FruitDetails from './Components/FruitDetails/FruitDetails';
 
 export const UserContext = createContext();
 
@@ -48,9 +49,9 @@ function App() {
         <Route path="/login">
           <Login></Login>
         </Route>
-        <Route path="/fruitDetail">
-          <FruitDetail></FruitDetail>
-        </Route>
+        <PrivateRoute path="/fruitDetails/:id">
+          <FruitDetails></FruitDetails>
+        </PrivateRoute>
         <Route path="/management">
           <Management></Management>
         </Route>
