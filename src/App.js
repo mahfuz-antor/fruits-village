@@ -10,9 +10,21 @@ import Admin from './Components/Admin/Admin';
 import Login from './Components/Login/Login';
 import Orders from './Components/Orders/Orders';
 import Header from './Components/Header/Header';
+import { createContext, useState } from 'react';
+import Shipment from './Components/Shipment/Shipment';
+import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
+import FruitDetail from './Components/FruitDetail/FruitDetail'
+import Management from './Components/Management/Management';
+
+export const UserContext = createContext();
+
 
 function App() {
+  const [loggedInUser, setLoggedInUser] = useState({});
+
   return (
+    <UserContext.Provider value = {[loggedInUser, setLoggedInUser]}>
+    <h3>Email: {loggedInUser.email}</h3>
     <Router>
       <Switch>
         <Route path="/home">
@@ -24,17 +36,27 @@ function App() {
         <Route path="/header">
           <Header></Header>
         </Route>
-        <Route path="/admin">
+        <PrivateRoute path="/shipment">
+          <Shipment></Shipment>
+        </PrivateRoute>
+        <PrivateRoute path="/admin">
           <Admin></Admin>
-        </Route>
-        <Route path="/orders">
+        </PrivateRoute>
+        <PrivateRoute path="/orders">
           <Orders></Orders>
-        </Route>
+        </PrivateRoute>
         <Route path="/login">
           <Login></Login>
         </Route>
+        <Route path="/fruitDetail">
+          <FruitDetail></FruitDetail>
+        </Route>
+        <Route path="/management">
+          <Management></Management>
+        </Route>
       </Switch>
     </Router>
+    </UserContext.Provider>
   );
 }
 

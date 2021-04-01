@@ -1,11 +1,22 @@
 import React from 'react';
-import Header from '../Header/Header';
+import { useHistory } from 'react-router';
 
-const Fruits = () => {
+
+const Fruits = ({event}) => {
+    const history = useHistory()
+
+    const handleCheckout = () =>{
+        history.push('/shipment');
+    }
+
     return (
-        <div>
-            <Header></Header>
-            <h1>This is Fruits Page.</h1>
+        <div className="bg-light rounded m-3 p-2 border border-secondary">
+            <div className="col-md-12">
+                <img style={{height: '200px'}} src={event.imageURL} alt=""/>
+                <h5>{event.name}</h5>
+                <p>Price: $ 45 <button onClick={handleCheckout}>Buy Now</button></p>
+                
+            </div>
         </div>
     );
 };
