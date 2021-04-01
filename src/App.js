@@ -37,9 +37,9 @@ function App() {
         <Route path="/header">
           <Header></Header>
         </Route>
-        <PrivateRoute path="/shipment">
+        {/* <PrivateRoute path="/shipment">
           <Shipment></Shipment>
-        </PrivateRoute>
+        </PrivateRoute> */}
         <PrivateRoute path="/admin">
           <Admin></Admin>
         </PrivateRoute>

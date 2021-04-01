@@ -15,7 +15,7 @@ const Fruits = ({event}) => {
     //     //     console.log(data);
     //     // })
     // }
-    // console.log(event);
+    console.log(event);
 
     return (
         <div className="bg-light rounded m-3 p-2 border border-secondary">
@@ -24,7 +24,7 @@ const Fruits = ({event}) => {
                 <h5>{event.name}</h5>
                 <h5></h5>
                 {/* <h5>{event._id}</h5> */}
-                <p>Price: {event.price} <button> <Link to={"/fruitDetails/"+event._id}>Buy Now</Link> </button> </p>
+                <p>Price: ${event.price} <button> <Link to={"/fruitDetails/"+event._id}>Buy Now</Link> </button> </p>
                 
             </div>
         </div>
