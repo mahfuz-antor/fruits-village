@@ -1,6 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { useParams } from 'react-router';
+import { UserContext } from '../../App';
 import Header from '../Header/Header';
+import { useForm } from 'react-hook-form';
+// import { getDatabaseCart, processOrder } from '../../utilities/databaseManager';
 import Management from '../Management/Management';
 
 
@@ -24,7 +27,32 @@ const FruitDetails = () => {
 
     const { id } = useParams();
     const fruit = detail.find(pd => pd._id === id)
-    // console.log(fruit);
+    console.log(fruit);
+
+    const { register, handleSubmit, watch, errors } = useForm();
+    const [loggedInUser, setLoggedInUser] = useContext(UserContext);
+
+    const onSubmit = data => {
+        // const savedCart = getDatabaseCart();
+        const orderDetails = {...loggedInUser, product: fruit, shipment: data, orderTime: new Date()};
+        console.log(setLoggedInUser);
+  
+        fetch('http://localhost:5000/addOrder', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(orderDetails)
+        })
+        .then(res => res.json())
+        .then(data => {
+          if(data){
+            // processOrder();
+            alert('Your Order Submitted Successfully.')
+          }
+        })
+  
+      };
 
     return (
         <div className="container">
@@ -39,7 +67,7 @@ const FruitDetails = () => {
                 <button>Checkout</button>
             </div> */}
             {/* <h3>Name: {fruit.name}</h3> */}
-
+            <form className="ship-form" onSubmit={handleSubmit(onSubmit)}>
             <table className="table">
                 <thead>
                     <tr>
@@ -62,10 +90,12 @@ const FruitDetails = () => {
                         <th scope="row"></th>
                         <td></td>
                         <td></td>
-                        <td> <button>Checkout</button> </td>
+                        <td> <input type="submit" /> </td>
                     </tr>
                 </tbody>
             </table>
+            
+    </form>
 
         </div>
     );
