@@ -26,7 +26,7 @@ const DeleteFruit = ({ event }) => {
                         {/* <th style={tableStyle}>#</th> */}
                         <th style={tableStyle}>Name: {event.name} ---</th>
                         <th style={tableStyle}>Price: {event.price}  -----</th>
-                        <th style={tableStyle}><button onClick={() => handleDelete(event._id)}>Delete</button></th>
+                        <th style={tableStyle}><button className="btn btn-primary" onClick={() => handleDelete(event._id)}>Delete</button></th>
                     </tr>
                 </thead>
             </table>
