@@ -16,7 +16,7 @@ const Home = () => {
     return (
         <div className="container">
             <Header></Header>
-            <h1>This is Home Page.</h1>
+            {/* <h1>This is Home Page.</h1> */}
             <div className="row">
                 {
                     events.map(event => <Fruits event={event}></Fruits>)

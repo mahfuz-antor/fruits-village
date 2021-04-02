@@ -1,31 +1,32 @@
 import React from 'react';
-import Header from '../Header/Header';
 
-const DeleteFruit = ({event}) => {
+const DeleteFruit = ({ event }) => {
     console.log(event);
 
     const handleDelete = (id) => {
         fetch(`http://localhost:5000/delete/${id}`, {
             method: 'DELETE'
         })
-        .then(res => res.json())
-        .then(result => {
-            console.log(result);
-        })
+            .then(res => res.json())
+            .then(result => {
+                console.log(result);
+            })
         // console.log('click succcess');
     }
-
+    const tableStyle = {
+        width: '200px'
+    }
     return (
-        <div className="container">
-            {/* <Header></Header> */}
+        <div style={{ width: '700px' }} className="container">
+
             {/* <h1>Name: {event.name}  Price: {event.price}</h1> */}
-            <table className="table">
+            <table className="table container">
                 <thead>
-                    <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">{event.name} ---</th>
-                        <th scope="col">{event.price}  -----</th>
-                        <th scope="col"><button onClick={() => handleDelete (event._id)}>Delete</button></th>
+                    <tr scope="row">
+                        {/* <th style={tableStyle}>#</th> */}
+                        <th style={tableStyle}>Name: {event.name} ---</th>
+                        <th style={tableStyle}>Price: {event.price}  -----</th>
+                        <th style={tableStyle}><button onClick={() => handleDelete(event._id)}>Delete</button></th>
                     </tr>
                 </thead>
             </table>

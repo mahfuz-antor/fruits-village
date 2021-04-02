@@ -3,8 +3,6 @@ import { useParams } from 'react-router';
 import { UserContext } from '../../App';
 import Header from '../Header/Header';
 import { useForm } from 'react-hook-form';
-// import { getDatabaseCart, processOrder } from '../../utilities/databaseManager';
-import Management from '../Management/Management';
 
 
 const OrderDetails = () => {
@@ -18,18 +16,12 @@ const OrderDetails = () => {
 
     }, [])
 
-    // console.log(detail);
-    // useEffect(() => {
-    //     fetch('http://localhost:5000/fruitDetail')
-    //         .then(res => res.json())
-    //         .then(data => setFruitDetail(data))
-    // }, [])
 
     const { id } = useParams();
     const fruit = detail.find(pd => pd._id === id)
     console.log(fruit);
 
-    const { register, handleSubmit, watch, errors } = useForm();
+    const { handleSubmit } = useForm();
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
 
     const onSubmit = data => {
@@ -57,16 +49,7 @@ const OrderDetails = () => {
     return (
         <div className="container">
             <Header></Header>
-            {/* <h1>This is FruitDetail Page.{id}</h1> */}
-            {/* <div>
-                <h2>
-                    <span> <strong>Name: {fruit?.name}</strong> </span>
-                    <span>  Quantity: 1  </span>
-                    <span>  Price: $45 </span>
-                </h2>
-                <button>Checkout</button>
-            </div> */}
-            {/* <h3>Name: {fruit.name}</h3> */}
+            
             <form className="ship-form" onSubmit={handleSubmit(onSubmit)}>
             <table className="table">
                 <thead>
