@@ -10,7 +10,7 @@ const OrderDetails = () => {
     const [detail, setDetail] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/orderDetails')
+        fetch('https://glacial-anchorage-30312.herokuapp.com/orderDetails')
             .then(res => res.json())
             .then(data => setDetail(data))
 
@@ -29,7 +29,7 @@ const OrderDetails = () => {
         const orderDetails = { ...loggedInUser, product: fruit, shipment: data, orderTime: new Date() };
         console.log(setLoggedInUser);
 
-        fetch('http://localhost:5000/addOrder', {
+        fetch('https://glacial-anchorage-30312.herokuapp.com/addOrder', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

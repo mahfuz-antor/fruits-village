@@ -14,7 +14,7 @@ const AddFruit = () => {
             imageURL: imageURL,
             price: data.price
         };
-        const url = `http://localhost:5000/addFruit`
+        const url = `https://glacial-anchorage-30312.herokuapp.com/addFruit`
         console.log(eventData);
         fetch(url, {
             method: 'POST',

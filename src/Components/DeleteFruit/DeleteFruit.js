@@ -4,7 +4,7 @@ const DeleteFruit = ({ event }) => {
     console.log(event);
 
     const handleDelete = (id) => {
-        fetch(`http://localhost:5000/delete/${id}`, {
+        fetch(`https://glacial-anchorage-30312.herokuapp.com/delete/${id}`, {
             method: 'DELETE'
         })
             .then(res => res.json())
@@ -22,7 +22,7 @@ const DeleteFruit = ({ event }) => {
             {/* <h1>Name: {event.name}  Price: {event.price}</h1> */}
             <table className="table container">
                 <thead>
-                    <tr scope="row">
+                    <tr className="row">
                         {/* <th style={tableStyle}>#</th> */}
                         <th style={tableStyle}>Name: {event.name} ---</th>
                         <th style={tableStyle}>Price: {event.price}  -----</th>

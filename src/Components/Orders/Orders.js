@@ -10,7 +10,7 @@ const Orders = () => {
 
 
     useEffect(() => {
-        fetch('http://localhost:5000/orders?email=' + loggedInUser.email)
+        fetch('https://glacial-anchorage-30312.herokuapp.com/orders?email=' + loggedInUser.email)
             .then(res => res.json())
             .then(data => setDetail(data))
 
@@ -31,7 +31,7 @@ const Orders = () => {
             <h3>You have ordered: {detail.length}</h3>
             
             {
-                detail.map(order => <div> <strong> Fruit :: {order.product.name} --- </strong>  Name: {order.name} ---  Email:{order.email} </div>)
+                detail.map(order => <div> <strong> Fruit :: {order.product.name} --- </strong>  Name:: {order.name} ---  Email:: {order.email} </div>)
             }
         </div>
     );

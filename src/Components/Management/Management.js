@@ -8,7 +8,7 @@ const Management = () => {
     const [events, setEvents] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/events')
+        fetch('https://glacial-anchorage-30312.herokuapp.com/events')
             .then(res => res.json())
             .then(data => setEvents(data))
     }, [])

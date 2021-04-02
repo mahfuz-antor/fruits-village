@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const Header = () => {
     return (
         <div className="container mt-5">
-            <nav className="navbar navbar-expand-lg navbar-light bg-secondary rounded">
+            <nav className="navbar navbar-expand-lg navbar-light bg-secondary rounded shadow">
                 <div className="container-fluid text-info">
                     <a className="navbar-brand  text-light" href="../home"><h4>Fruits Village</h4></a>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
