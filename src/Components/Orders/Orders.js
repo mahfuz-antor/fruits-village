@@ -22,17 +22,19 @@ const Orders = () => {
     return (
         <div className="container">
             <Header></Header>
+            <div className="bg-info m-5 p-3 text-white shadow">
             {
                 detail.length === 0 &&
                 <div style={{marginLeft:'50%'}} class="spinner-border text-primary justify-content-center" role="status">
                     <span class="sr-only">Loading...</span>
                 </div>
             }
-            <h3>You have ordered: {detail.length}</h3>
+            <h3>You have ordered: {detail.length} Fruits</h3>
             
             {
                 detail.map(order => <div> <strong> Fruit :: {order.product.name} --- </strong>  Name:: {order.name} ---  Email:: {order.email} </div>)
             }
+            </div>
         </div>
     );
 };
