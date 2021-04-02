@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
+import DeleteFruit from '../DeleteFruit/DeleteFruit';
 import Header from '../Header/Header';
-import Shipment from '../Shipment/Shipment';
 
 const Management = () => {
 
@@ -28,7 +28,7 @@ const Management = () => {
         <div className="container">
             <Header></Header>
             {
-                events.map(event => <Shipment event={event}></Shipment>)
+                events.map(event => <DeleteFruit event={event}></DeleteFruit>)
             }
 
         </div>

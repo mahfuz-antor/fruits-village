@@ -1,26 +1,25 @@
 import React from 'react';
 import Header from '../Header/Header';
 
-const Shipment = () => {
-    // console.log(event);
+const DeleteFruit = ({event}) => {
+    console.log(event);
 
-    // const handleDelete = (id) => {
-    //     fetch(`http://localhost:5000/delete/${id}`, {
-    //         method: 'DELETE'
-    //     })
-    //     .then(res => res.json())
-    //     .then(result => {
-    //         console.log(result);
-    //     })
-    //     // console.log('click succcess');
-    // }
+    const handleDelete = (id) => {
+        fetch(`http://localhost:5000/delete/${id}`, {
+            method: 'DELETE'
+        })
+        .then(res => res.json())
+        .then(result => {
+            console.log(result);
+        })
+        // console.log('click succcess');
+    }
 
     return (
         <div className="container">
-            <h1>This is Shipment Page.</h1>
             {/* <Header></Header> */}
             {/* <h1>Name: {event.name}  Price: {event.price}</h1> */}
-            {/* <table className="table">
+            <table className="table">
                 <thead>
                     <tr>
                         <th scope="col">#</th>
@@ -29,9 +28,9 @@ const Shipment = () => {
                         <th scope="col"><button onClick={() => handleDelete (event._id)}>Delete</button></th>
                     </tr>
                 </thead>
-            </table> */}
+            </table>
         </div>
     );
 };
 
-export default Shipment;
+export default DeleteFruit;
