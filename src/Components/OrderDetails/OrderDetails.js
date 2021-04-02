@@ -7,12 +7,12 @@ import { useForm } from 'react-hook-form';
 import Management from '../Management/Management';
 
 
-const FruitDetails = () => {
+const OrderDetails = () => {
 
     const [detail, setDetail] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/fruitDetail')
+        fetch('http://localhost:5000/orderDetails')
             .then(res => res.json())
             .then(data => setDetail(data))
 
@@ -81,7 +81,7 @@ const FruitDetails = () => {
                     <tr>
                         <th scope="row">1</th>
                         <td>{fruit?.name}</td>
-                        <td> 1 </td>
+                        <td> 3 </td>
                         <td> {fruit?.price} </td>
                     </tr>
                 </tbody>
@@ -101,4 +101,4 @@ const FruitDetails = () => {
     );
 };
 
-export default FruitDetails;
+export default OrderDetails;

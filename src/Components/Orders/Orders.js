@@ -24,7 +24,7 @@ const Orders = () => {
         <div className="container">
             <Header></Header>
             <h1>You have ordered: {detail.length}</h1>
-            {/* <h1>This is Order component. <Link to={"/"+ email}></Link></h1> */}
+            
             {
                 detail.map(order => <div>Fruit: {order.product.name} Name: {order.name}  Email:{order.email} </div>)
             }
