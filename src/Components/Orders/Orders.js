@@ -23,6 +23,12 @@ const Orders = () => {
         <div className="container">
             <Header></Header>
             <h1>You have ordered: {detail.length}</h1>
+            {
+                detail.length === 0 &&
+                <div class="spinner-border text-primary justify-content-center" role="status">
+                    <span class="sr-only">Loading...</span>
+                </div>
+            }
 
             {
                 detail.map(order => <div>Fruit: {order.product.name} Name: {order.name}  Email:{order.email} </div>)

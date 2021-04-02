@@ -49,6 +49,11 @@ const OrderDetails = () => {
     return (
         <div className="container">
             <Header></Header>
+            {
+                detail.length === 0 && <div class="spinner-border text-primary d-flex justify-content-center" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+            }
             
             <form className="ship-form" onSubmit={handleSubmit(onSubmit)}>
             <table className="table">
