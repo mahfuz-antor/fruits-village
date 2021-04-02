@@ -71,7 +71,7 @@ const AddFruit = () => {
                                 <input type="file" name="exampleRequired" onChange={handleImageUpload} />
 
                                 <br />
-                                <input type="submit" />
+                                <input className="btn btn-primary text-white" type="submit" />
                             </form>
 
                         </div>

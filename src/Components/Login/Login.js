@@ -61,17 +61,17 @@ const Login = () => {
         <div className="container">
             <Header></Header>
             {/* <h1>This is Login Page.</h1> */}
-            {/* <button class="btn btn-primary" onClick={handleSignIn}>Sign In With Google</button> */}
+            {/* <button className="btn btn-primary" onClick={handleSignIn}>Sign In With Google</button> */}
             {
                 user.isSignedIn && <div>
                     <p>Welcome: {user.name}</p>
                     <p>Email: {user.email}</p>
                 </div>
             }
-            <div class="card-body text-center">
-                <h3 class="card-title">This is Login Page.</h3>
-                <p class="card-text">You can easily login from here only by google account</p>
-                <button class="btn btn-primary" onClick={handleSignIn}>Continue With Google</button>
+            <div className="card-body text-center">
+                <h3 className="card-title">This is Login Page.</h3>
+                <p className="card-text">You can easily login from here only by google account</p>
+                <button className="btn btn-primary" onClick={handleSignIn}>Continue With Google</button>
             </div>
         </div>
     );

@@ -79,7 +79,7 @@ const OrderDetails = () => {
                             <th scope="row"></th>
                             <td></td>
                             <td></td>
-                            <td> <input type="submit" /> </td>
+                            <td> <input className="btn btn-primary text-white" type="submit" /> </td>
                         </tr>
                     </tbody>
                 </table>

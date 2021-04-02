@@ -10,12 +10,12 @@ const Fruits = ({ event }) => {
     console.log(event);
 
     return (
-        <div className="bg-light rounded m-3 p-2 border border-secondary">
+        <div className="bg-light rounded m-3 p-2 border border-secondary shadow">
             <div className="col-md-12">
                 <img style={{ height: '200px' }} src={event.imageURL} alt="" />
                 <h5>{event.name}</h5>
 
-                <p>Price: ${event.price} <button> <Link to={"/orderDetails/" + event._id}>Buy Now</Link> </button> </p>
+                <p>Price: ${event.price} <button className="btn btn-primary"> <Link className=" text-white" to={"/orderDetails/" + event._id}>Buy Now</Link> </button> </p>
 
             </div>
         </div>

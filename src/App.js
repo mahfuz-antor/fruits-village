@@ -11,9 +11,7 @@ import Login from './Components/Login/Login';
 import Orders from './Components/Orders/Orders';
 import Header from './Components/Header/Header';
 import { createContext, useState } from 'react';
-import Shipment from './Components/Shipment/Shipment';
 import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
-// import FruitDetails from './Components/FruitDetail/FruitDetail'
 import Management from './Components/Management/Management';
 import OrderDetails from './Components/OrderDetails/OrderDetails';
 import AddFruit from './Components/AddFruit/AddFruit';
