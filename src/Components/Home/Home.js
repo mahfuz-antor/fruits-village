@@ -21,7 +21,7 @@ const Home = () => {
             <div className="row">
                 {
                     events.length === 0 &&
-                    <div class="spinner-border text-primary justify-content-center" role="status">
+                    <div style={{margin:'0 auto'}} class="spinner-border text-primary justify-content-center" role="status">
                         <span class="sr-only">Loading...</span>
                     </div>
                 }
