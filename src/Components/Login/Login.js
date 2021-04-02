@@ -68,10 +68,12 @@ const Login = () => {
                     <p>Email: {user.email}</p>
                 </div>
             }
-            <div className="card-body text-center bg-info m-5 shadow">
+            <div className="card m-3 bg-info shadow">
+            <div className="card-body text-center bg-white  m-5 shadow">
                 <h3 className="card-title">This is Login Page.</h3>
                 <p className="card-text">You can easily login from here only by google account</p>
                 <button className="btn btn-primary" onClick={handleSignIn}>Continue With Google</button>
+            </div>
             </div>
         </div>
     );

@@ -21,12 +21,12 @@ const Management = () => {
             <div className="row mt-4">
                 <div className="col-sm-4">
                     <div style={{ marginLeft: '100px' }} className="card">
-                        <div className="card-body">
+                        <div style={{height:'500px'}} className="card-body bg-info text-white">
                             <h2 className="card-title">Fruits Village</h2>
                             {/* <p className="card-text">With supporting text below as a natural lead-in to additional content.</p> */}
-                            <Link to="/management">Manage Product</Link><br />
-                            <Link to="/addFruit">Add Product</Link><br />
-                            <Link to="/admin">Edit Product</Link><br />
+                            <Link className="text-white" to="/management">Manage Product</Link><br />
+                            <Link className="text-white" to="/addFruit">Add Product</Link><br />
+                            <Link className="text-white" to="/admin">Edit Product</Link><br />
                         </div>
                     </div>
                 </div>

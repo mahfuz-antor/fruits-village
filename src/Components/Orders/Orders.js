@@ -22,6 +22,7 @@ const Orders = () => {
     return (
         <div className="container">
             <Header></Header>
+            <div className="card m-5 bg-white shadow">
             <div className="bg-info m-5 p-3 text-white shadow">
             {
                 detail.length === 0 &&
@@ -34,6 +35,7 @@ const Orders = () => {
             {
                 detail.map(order => <div> <strong> Fruit :: {order.product.name} --- </strong>  Name:: {order.name} ---  Email:: {order.email} </div>)
             }
+            </div>
             </div>
         </div>
     );

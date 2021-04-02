@@ -48,18 +48,18 @@ const AddFruit = () => {
             <div className="row m-3">
                 <div className="col-sm-3">
                     <div className="card">
-                        <div className="card-body">
+                        <div style={{height:'500px'}} className="card-body bg-info text-white">
                             <h2 className="card-title">Fruits Village</h2>
                             {/* <p className="card-text">With supporting text below as a natural lead-in to additional content.</p> */}
-                            <Link to="/management">Manage Product</Link><br />
-                            <Link to="/addFruit">Add Product</Link><br />
-                            <Link to="/admin">Edit Product</Link><br />
+                            <Link className="text-white" to="/management">Manage Product</Link><br />
+                            <Link className="text-white" to="/addFruit">Add Product</Link><br />
+                            <Link className="text-white" to="/admin">Edit Product</Link><br />
                         </div>
                     </div>
                 </div>
                 <div className="col-sm-9">
-                    <div className="card">
-                        <div className="card-body">
+                    <div className="card bg-info">
+                        <div className="card-body text-center bg-white  m-5 shadow">
 
                             <form onSubmit={handleSubmit(onSubmit)}>
                                 <h3>Add Your Fruit Details Here</h3>
@@ -71,7 +71,7 @@ const AddFruit = () => {
                                 <input type="file" name="exampleRequired" onChange={handleImageUpload} />
 
                                 <br />
-                                <input className="btn btn-primary text-white" type="submit" />
+                                <input className="btn btn-primary  text-white" type="submit" />
                             </form>
 
                         </div>
